@@ -6,4 +6,17 @@
 //  Copyright © 2018 Jithin. All rights reserved.
 //
 
+
 import Foundation
+
+class Logger {
+    
+    class func log(_ message: Any, file: String = #file, function: String = #function){
+        
+        print("=================")
+        print("File: ", file.components(separatedBy: "/").last ?? "")
+        print("Function: ", function)
+        print("Message: ", message)
+        print("=================")
+    }
+}

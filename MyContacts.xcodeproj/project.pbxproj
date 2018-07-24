@@ -23,6 +23,7 @@
 		B0AFE03F210758530090B502 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AFE03E210758530090B502 /* Logger.swift */; };
 		B0AFE0412107588A0090B502 /* FirebaseConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AFE0402107588A0090B502 /* FirebaseConstants.swift */; };
 		B0AFE04321075D4D0090B502 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B0AFE04221075D4C0090B502 /* GoogleService-Info.plist */; };
+		B0AFE0462107654F0090B502 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AFE0452107654F0090B502 /* Result.swift */; };
 		F1BEB06B180FB7BB8CFDA5DC /* Pods_MyContacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F98C02F81D8FBF1F2BB0802 /* Pods_MyContacts.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +48,7 @@
 		B0AFE03E210758530090B502 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		B0AFE0402107588A0090B502 /* FirebaseConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseConstants.swift; sourceTree = "<group>"; };
 		B0AFE04221075D4C0090B502 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B0AFE0452107654F0090B502 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		F553A95A3D097738942DC12F /* Pods-MyContacts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyContacts.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyContacts/Pods-MyContacts.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -147,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				B0AFE03A210758320090B502 /* BaseViewController.swift */,
+				B0AFE0452107654F0090B502 /* Result.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0AFE02B210756E10090B502 /* ContactsController.swift in Sources */,
+				B0AFE0462107654F0090B502 /* Result.swift in Sources */,
 				B0AFE03F210758530090B502 /* Logger.swift in Sources */,
 				B0AFE0312107575A0090B502 /* APIConstants.swift in Sources */,
 				B0144C8C2107514600861230 /* AppDelegate.swift in Sources */,
@@ -455,7 +459,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9DENJD3M83;
 				INFOPLIST_FILE = MyContacts/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jithin.MyContacts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -471,7 +478,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9DENJD3M83;
 				INFOPLIST_FILE = MyContacts/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jithin.MyContacts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

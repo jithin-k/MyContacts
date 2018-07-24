@@ -7,3 +7,16 @@
 //
 
 import Foundation
+
+struct FirebaseRef {
+    static let contacts = "contacts"
+}
+
+struct FirebaseKeys {
+    static let id = "id"
+    static let firstName = "firstName"
+    static let lastName = "lastName"
+    static let email = "email"
+    static let phone = "phone"
+    static let country = "country"
+}

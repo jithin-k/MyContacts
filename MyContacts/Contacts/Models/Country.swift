@@ -7,3 +7,15 @@
 //
 
 import Foundation
+
+struct Country: Decodable {
+    let name: String
+    let countryCode: String
+    let region: String
+    
+    private enum CodingKeys: String, CodingKey{
+        case name
+        case countryCode = "alpha3Code"
+        case region
+    }
+}

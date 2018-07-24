@@ -22,9 +22,13 @@
 		B0AFE03D210758470090B502 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AFE03C210758470090B502 /* Constants.swift */; };
 		B0AFE03F210758530090B502 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AFE03E210758530090B502 /* Logger.swift */; };
 		B0AFE0412107588A0090B502 /* FirebaseConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AFE0402107588A0090B502 /* FirebaseConstants.swift */; };
+		B0AFE04321075D4D0090B502 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B0AFE04221075D4C0090B502 /* GoogleService-Info.plist */; };
+		F1BEB06B180FB7BB8CFDA5DC /* Pods_MyContacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F98C02F81D8FBF1F2BB0802 /* Pods_MyContacts.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		159318089582A6237DDE74C0 /* Pods-MyContacts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyContacts.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyContacts/Pods-MyContacts.debug.xcconfig"; sourceTree = "<group>"; };
+		8F98C02F81D8FBF1F2BB0802 /* Pods_MyContacts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyContacts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0144C882107514600861230 /* MyContacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyContacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0144C8B2107514600861230 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B0144C922107514800861230 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -42,6 +46,8 @@
 		B0AFE03C210758470090B502 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B0AFE03E210758530090B502 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		B0AFE0402107588A0090B502 /* FirebaseConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseConstants.swift; sourceTree = "<group>"; };
+		B0AFE04221075D4C0090B502 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F553A95A3D097738942DC12F /* Pods-MyContacts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyContacts.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyContacts/Pods-MyContacts.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,17 +55,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1BEB06B180FB7BB8CFDA5DC /* Pods_MyContacts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2306C65B164F2921E4698C2D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8F98C02F81D8FBF1F2BB0802 /* Pods_MyContacts.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B0144C7F2107514600861230 = {
 			isa = PBXGroup;
 			children = (
 				B0144C8A2107514600861230 /* MyContacts */,
 				B0144C892107514600861230 /* Products */,
+				FE1E9C7318CEE7D52EB3D963 /* Pods */,
+				2306C65B164F2921E4698C2D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,6 +98,7 @@
 				B0AFE022210756790090B502 /* WebService */,
 				B0144C922107514800861230 /* Assets.xcassets */,
 				B0144C942107514800861230 /* LaunchScreen.storyboard */,
+				B0AFE04221075D4C0090B502 /* GoogleService-Info.plist */,
 				B0144C972107514800861230 /* Info.plist */,
 			);
 			path = MyContacts;
@@ -158,6 +176,15 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		FE1E9C7318CEE7D52EB3D963 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				159318089582A6237DDE74C0 /* Pods-MyContacts.debug.xcconfig */,
+				F553A95A3D097738942DC12F /* Pods-MyContacts.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -165,9 +192,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B0144C9A2107514800861230 /* Build configuration list for PBXNativeTarget "MyContacts" */;
 			buildPhases = (
+				F83E3A4039B345B0827EEE95 /* [CP] Check Pods Manifest.lock */,
 				B0144C842107514600861230 /* Sources */,
 				B0144C852107514600861230 /* Frameworks */,
 				B0144C862107514600861230 /* Resources */,
+				6B0309A1E93CEC0FCC9EB067 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -217,12 +246,58 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0AFE026210756B30090B502 /* Contacts.storyboard in Resources */,
+				B0AFE04321075D4D0090B502 /* GoogleService-Info.plist in Resources */,
 				B0144C962107514800861230 /* LaunchScreen.storyboard in Resources */,
 				B0144C932107514800861230 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6B0309A1E93CEC0FCC9EB067 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MyContacts/Pods-MyContacts-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyContacts/Pods-MyContacts-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F83E3A4039B345B0827EEE95 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyContacts-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B0144C842107514600861230 /* Sources */ = {
@@ -374,15 +449,13 @@
 		};
 		B0144C9B2107514800861230 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 159318089582A6237DDE74C0 /* Pods-MyContacts.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9DENJD3M83;
 				INFOPLIST_FILE = MyContacts/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jithin.MyContacts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -392,15 +465,13 @@
 		};
 		B0144C9C2107514800861230 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F553A95A3D097738942DC12F /* Pods-MyContacts.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9DENJD3M83;
 				INFOPLIST_FILE = MyContacts/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jithin.MyContacts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

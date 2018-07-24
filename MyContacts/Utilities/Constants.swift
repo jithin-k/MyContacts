@@ -14,5 +14,10 @@ struct Constants {
 }
 
 struct CellIdentifiers {
-    static let contactListCell = "contactsCell"
+    static let contactListCell = "contactCell"
+}
+
+struct ViewcontrollerIds {
+    static let contactsVC = "ContactsVC"
+    static let addContactVC = "AddContactVC"
 }

@@ -23,6 +23,10 @@ class FirebaseManager {
         rootRef = Database.database().reference(withPath: FirebaseRef.contacts)
     }
     
+    func saveContact(_ contact: Contact) {
+        rootRef.child(contact.id).setValue(contact.asAny())
+    }
+    
     func contactAdded(completion: @escaping ContactCompletion) {
         newContactHandle = rootRef.observe(.childAdded) { (snapshot) in
             guard let contact = Contact(snapshot: snapshot) else { return }

@@ -22,9 +22,9 @@
 		B0AFE03D210758470090B502 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AFE03C210758470090B502 /* Constants.swift */; };
 		B0AFE03F210758530090B502 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AFE03E210758530090B502 /* Logger.swift */; };
 		B0AFE0412107588A0090B502 /* FirebaseConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AFE0402107588A0090B502 /* FirebaseConstants.swift */; };
-		B0AFE04321075D4D0090B502 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B0AFE04221075D4C0090B502 /* GoogleService-Info.plist */; };
 		B0AFE0462107654F0090B502 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AFE0452107654F0090B502 /* Result.swift */; };
 		B0AFE049210769260090B502 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AFE048210769260090B502 /* FirebaseManager.swift */; };
+		B0AFE04B2107773F0090B502 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B0AFE04A2107773E0090B502 /* GoogleService-Info.plist */; };
 		F1BEB06B180FB7BB8CFDA5DC /* Pods_MyContacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F98C02F81D8FBF1F2BB0802 /* Pods_MyContacts.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,9 +48,9 @@
 		B0AFE03C210758470090B502 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B0AFE03E210758530090B502 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		B0AFE0402107588A0090B502 /* FirebaseConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseConstants.swift; sourceTree = "<group>"; };
-		B0AFE04221075D4C0090B502 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B0AFE0452107654F0090B502 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		B0AFE048210769260090B502 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		B0AFE04A2107773E0090B502 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F553A95A3D097738942DC12F /* Pods-MyContacts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyContacts.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyContacts/Pods-MyContacts.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,7 +102,7 @@
 				B0AFE022210756790090B502 /* WebService */,
 				B0144C922107514800861230 /* Assets.xcassets */,
 				B0144C942107514800861230 /* LaunchScreen.storyboard */,
-				B0AFE04221075D4C0090B502 /* GoogleService-Info.plist */,
+				B0AFE04A2107773E0090B502 /* GoogleService-Info.plist */,
 				B0144C972107514800861230 /* Info.plist */,
 			);
 			path = MyContacts;
@@ -260,7 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0AFE026210756B30090B502 /* Contacts.storyboard in Resources */,
-				B0AFE04321075D4D0090B502 /* GoogleService-Info.plist in Resources */,
+				B0AFE04B2107773F0090B502 /* GoogleService-Info.plist in Resources */,
 				B0144C962107514800861230 /* LaunchScreen.storyboard in Resources */,
 				B0144C932107514800861230 /* Assets.xcassets in Resources */,
 			);
@@ -478,7 +478,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.jithin.MyContacts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -497,7 +497,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.jithin.MyContacts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

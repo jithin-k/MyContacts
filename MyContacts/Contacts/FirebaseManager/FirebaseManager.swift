@@ -23,27 +23,30 @@ class FirebaseManager {
         rootRef = Database.database().reference(withPath: FirebaseRef.contacts)
     }
     
-    func newContactAdded(completion: @escaping ContactCompletion) {
+    func contactAdded(completion: @escaping ContactCompletion) {
         newContactHandle = rootRef.observe(.childAdded) { (snapshot) in
-            guard let newContact = Contact(snapshot: snapshot) else { return }
+            guard let contact = Contact(snapshot: snapshot) else { return }
             
-            completion(.Success(newContact))
+            Logger.log("contact: \(contact)")
+            completion(.Success(contact))
         }
     }
     
     func contactUpdated(completion: @escaping ContactCompletion) {
         updateContactHandle = rootRef.observe(.childChanged, with: { (snapshot) in
-            guard let newContact = Contact(snapshot: snapshot) else { return }
+            guard let contact = Contact(snapshot: snapshot) else { return }
             
-            completion(.Success(newContact))
+            Logger.log("contact: \(contact)")
+            completion(.Success(contact))
         })
     }
     
     func contactDeleted(completion: @escaping ContactCompletion) {
         removeContactHandle = rootRef.observe(.childRemoved, with: { (snapshot) in
-            guard let newContact = Contact(snapshot: snapshot) else { return }
+            guard let contact = Contact(snapshot: snapshot) else { return }
             
-            completion(.Success(newContact))
+            Logger.log("contact: \(contact)")
+            completion(.Success(contact))
         })
     }
     

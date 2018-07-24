@@ -97,6 +97,7 @@
 			children = (
 				B0AFE0202107565E0090B502 /* Application */,
 				B0AFE0212107566E0090B502 /* Contacts */,
+				B0AFE047210768FA0090B502 /* FirebaseManager */,
 				B0AFE024210756920090B502 /* Helpers */,
 				B0AFE023210756890090B502 /* Utilities */,
 				B0AFE022210756790090B502 /* WebService */,
@@ -119,7 +120,6 @@
 		B0AFE0212107566E0090B502 /* Contacts */ = {
 			isa = PBXGroup;
 			children = (
-				B0AFE047210768FA0090B502 /* FirebaseManager */,
 				B0AFE029210756C90090B502 /* Views */,
 				B0AFE028210756C20090B502 /* Controller */,
 				B0AFE027210756BC0090B502 /* Models */,

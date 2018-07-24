@@ -70,7 +70,10 @@ class ContactsViewController: BaseViewController {
             }
         }
     }
-
+    
+    @IBAction func addButtonTapped(_ sender: UIBarButtonItem) {
+    }
+    
 }
 
 extension ContactsViewController: UITableViewDataSource {
@@ -81,7 +84,7 @@ extension ContactsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.contactListCell, for: indexPath)
-        cell.textLabel?.text = contacts[indexPath.row].firstName
+        cell.textLabel?.text = contacts[indexPath.row].name
         cell.detailTextLabel?.text = contacts[indexPath.row].phone
         
         return cell

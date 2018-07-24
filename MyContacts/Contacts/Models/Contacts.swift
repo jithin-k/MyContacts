@@ -12,16 +12,14 @@ import Firebase
 
 struct Contact {
     let id: String
-    let firstName: String
-    let lastName: String
+    let name: String
     let email: String
     let phone: String
     let country: String
     
-    init(id: String, firstName: String, lastName: String, email: String, phone: String, country: String) {
+    init(id: String, name: String, email: String, phone: String, country: String) {
         self.id = id
-        self.firstName = firstName
-        self.lastName = lastName
+        self.name = name
         self.email = email
         self.phone = phone
         self.country = country
@@ -31,8 +29,7 @@ struct Contact {
         guard
             let value = snapshot.value as? [String: AnyObject],
             let id = value[FirebaseKeys.id] as? String,
-            let firstName = value[FirebaseKeys.firstName] as? String,
-            let lastName = value[FirebaseKeys.lastName] as? String,
+            let name = value[FirebaseKeys.name] as? String,
             let email = value[FirebaseKeys.email] as? String,
             let phone = value[FirebaseKeys.phone] as? String,
             let country = value[FirebaseKeys.country] as? String
@@ -40,8 +37,7 @@ struct Contact {
                 return nil
         }
         self.id = id
-        self.firstName = firstName
-        self.lastName = lastName
+        self.name = name
         self.email = email
         self.phone = phone
         self.country = country
@@ -50,8 +46,7 @@ struct Contact {
     func asAny() -> Any {
         return [
             FirebaseKeys.id: id,
-            FirebaseKeys.firstName: firstName,
-            FirebaseKeys.lastName: lastName,
+            FirebaseKeys.name: name,
             FirebaseKeys.email: email,
             FirebaseKeys.phone: phone,
             FirebaseKeys.country: country

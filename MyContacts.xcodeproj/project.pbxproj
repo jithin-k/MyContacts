@@ -25,6 +25,7 @@
 		B0AFE0462107654F0090B502 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AFE0452107654F0090B502 /* Result.swift */; };
 		B0AFE049210769260090B502 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AFE048210769260090B502 /* FirebaseManager.swift */; };
 		B0AFE04B2107773F0090B502 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B0AFE04A2107773E0090B502 /* GoogleService-Info.plist */; };
+		B0AFE04D2107AD4E0090B502 /* AddContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AFE04C2107AD4E0090B502 /* AddContactViewController.swift */; };
 		F1BEB06B180FB7BB8CFDA5DC /* Pods_MyContacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F98C02F81D8FBF1F2BB0802 /* Pods_MyContacts.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		B0AFE0452107654F0090B502 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		B0AFE048210769260090B502 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		B0AFE04A2107773E0090B502 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B0AFE04C2107AD4E0090B502 /* AddContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactViewController.swift; sourceTree = "<group>"; };
 		F553A95A3D097738942DC12F /* Pods-MyContacts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyContacts.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyContacts/Pods-MyContacts.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -177,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				B0AFE02C210756F40090B502 /* ContactsViewController.swift */,
+				B0AFE04C2107AD4E0090B502 /* AddContactViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0AFE04D2107AD4E0090B502 /* AddContactViewController.swift in Sources */,
 				B0AFE02B210756E10090B502 /* ContactsController.swift in Sources */,
 				B0AFE0462107654F0090B502 /* Result.swift in Sources */,
 				B0AFE049210769260090B502 /* FirebaseManager.swift in Sources */,

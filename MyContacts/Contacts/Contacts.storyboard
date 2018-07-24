@@ -58,14 +58,77 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7yA-X7-fmT"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Contacts" id="PeX-d7-EvE"/>
+                    <navigationItem key="navigationItem" title="Contacts" id="PeX-d7-EvE">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="H7O-bA-Azy">
+                            <connections>
+                                <action selector="addButtonTapped:" destination="db8-Tg-BOn" id="O86-IQ-zhS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="contactsTableView" destination="xGn-Py-fuc" id="FMJ-o1-CWO"/>
+                        <segue destination="bDl-mT-Ku6" kind="show" id="xut-BR-JIA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8re-K4-Fja" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="517.60000000000002" y="151.57421289355324"/>
+        </scene>
+        <!--Add Contact View Controller-->
+        <scene sceneID="S7z-mP-P3a">
+            <objects>
+                <viewController id="bDl-mT-Ku6" customClass="AddContactViewController" customModule="MyContacts" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5OG-5h-m7d">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="a5c-fa-tRh">
+                                <rect key="frame" x="147.5" y="124" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="a0e-93-RNj"/>
+                                    <constraint firstAttribute="width" constant="80" id="iUp-EU-8tk"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E5q-9N-G92">
+                                <rect key="frame" x="139" y="252" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y0a-qM-Bmq">
+                                <rect key="frame" x="139" y="331" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YgB-dJ-eCt">
+                                <rect key="frame" x="139" y="419" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rs3-9a-HHi">
+                                <rect key="frame" x="139" y="486" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="a5c-fa-tRh" firstAttribute="top" secondItem="U2z-0y-Gu0" secondAttribute="top" constant="8" id="3ny-ZK-Hco"/>
+                            <constraint firstItem="a5c-fa-tRh" firstAttribute="centerX" secondItem="5OG-5h-m7d" secondAttribute="centerX" id="EXU-NF-HJF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="U2z-0y-Gu0"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oGA-ir-r0q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1249" y="152"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="APR-QL-9rj">

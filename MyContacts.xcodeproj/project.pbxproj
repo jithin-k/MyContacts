@@ -24,6 +24,7 @@
 		B0AFE0412107588A0090B502 /* FirebaseConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AFE0402107588A0090B502 /* FirebaseConstants.swift */; };
 		B0AFE04321075D4D0090B502 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B0AFE04221075D4C0090B502 /* GoogleService-Info.plist */; };
 		B0AFE0462107654F0090B502 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AFE0452107654F0090B502 /* Result.swift */; };
+		B0AFE049210769260090B502 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AFE048210769260090B502 /* FirebaseManager.swift */; };
 		F1BEB06B180FB7BB8CFDA5DC /* Pods_MyContacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F98C02F81D8FBF1F2BB0802 /* Pods_MyContacts.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,7 @@
 		B0AFE0402107588A0090B502 /* FirebaseConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseConstants.swift; sourceTree = "<group>"; };
 		B0AFE04221075D4C0090B502 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B0AFE0452107654F0090B502 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		B0AFE048210769260090B502 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		F553A95A3D097738942DC12F /* Pods-MyContacts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyContacts.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyContacts/Pods-MyContacts.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,6 +119,7 @@
 		B0AFE0212107566E0090B502 /* Contacts */ = {
 			isa = PBXGroup;
 			children = (
+				B0AFE047210768FA0090B502 /* FirebaseManager */,
 				B0AFE029210756C90090B502 /* Views */,
 				B0AFE028210756C20090B502 /* Controller */,
 				B0AFE027210756BC0090B502 /* Models */,
@@ -140,7 +143,6 @@
 			children = (
 				B0AFE03C210758470090B502 /* Constants.swift */,
 				B0AFE03E210758530090B502 /* Logger.swift */,
-				B0AFE0402107588A0090B502 /* FirebaseConstants.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -177,6 +179,15 @@
 				B0AFE02C210756F40090B502 /* ContactsViewController.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		B0AFE047210768FA0090B502 /* FirebaseManager */ = {
+			isa = PBXGroup;
+			children = (
+				B0AFE0402107588A0090B502 /* FirebaseConstants.swift */,
+				B0AFE048210769260090B502 /* FirebaseManager.swift */,
+			);
+			path = FirebaseManager;
 			sourceTree = "<group>";
 		};
 		FE1E9C7318CEE7D52EB3D963 /* Pods */ = {
@@ -309,6 +320,7 @@
 			files = (
 				B0AFE02B210756E10090B502 /* ContactsController.swift in Sources */,
 				B0AFE0462107654F0090B502 /* Result.swift in Sources */,
+				B0AFE049210769260090B502 /* FirebaseManager.swift in Sources */,
 				B0AFE03F210758530090B502 /* Logger.swift in Sources */,
 				B0AFE0312107575A0090B502 /* APIConstants.swift in Sources */,
 				B0144C8C2107514600861230 /* AppDelegate.swift in Sources */,

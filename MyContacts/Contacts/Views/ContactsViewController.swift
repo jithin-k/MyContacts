@@ -10,10 +10,65 @@ import UIKit
 
 class ContactsViewController: BaseViewController {
 
+    var contacts: [Contact] = []
+    @IBOutlet weak var contactsTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
+        addListeners()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        FirebaseManager.shared.removeListeners()
+    }
+    
+    fileprivate func addListeners (){
+        
+        FirebaseManager.shared.newContactAdded { (result) in
+            switch result {
+            case .Success(let contact):
+                self.contacts.append(contact)
+                
+                let index = IndexPath(row: self.contacts.count - 1, section: 0)
+                self.contactsTableView.insertRows(at: [index], with: .automatic)
+                
+            case .Failure(_): break
+            }
+        }
+        
+        FirebaseManager.shared.contactUpdated { (result) in
+            switch result {
+            case .Success(let contact):
+                guard let index = self.contacts.index(where: { $0.id == contact.id }) else { return }
+                
+                self.contacts[index] = contact
+                let path = IndexPath(row: index, section: 0)
+                self.contactsTableView.reloadRows(at: [path], with: .automatic)
+                
+            case .Failure(_): break
+            }
+        }
+        
+        FirebaseManager.shared.contactDeleted { (result) in
+            switch result {
+            case .Success(let contact):
+                guard let index = self.contacts.index(where: { $0.id == contact.id }) else { return }
+                
+                self.contacts.remove(at: index)
+                let path = IndexPath(row: index, section: 0)
+                self.contactsTableView.deleteRows(at: [path], with: .automatic)
+                
+            case .Failure(_): break
+            }
+        }
     }
 
 }

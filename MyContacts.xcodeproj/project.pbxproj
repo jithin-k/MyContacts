@@ -10,6 +10,18 @@
 		B0144C8C2107514600861230 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0144C8B2107514600861230 /* AppDelegate.swift */; };
 		B0144C932107514800861230 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0144C922107514800861230 /* Assets.xcassets */; };
 		B0144C962107514800861230 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0144C942107514800861230 /* LaunchScreen.storyboard */; };
+		B0AFE026210756B30090B502 /* Contacts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0AFE025210756B30090B502 /* Contacts.storyboard */; };
+		B0AFE02B210756E10090B502 /* ContactsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AFE02A210756E10090B502 /* ContactsController.swift */; };
+		B0AFE02D210756F40090B502 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AFE02C210756F40090B502 /* ContactsViewController.swift */; };
+		B0AFE02F2107574A0090B502 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AFE02E2107574A0090B502 /* Networking.swift */; };
+		B0AFE0312107575A0090B502 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AFE0302107575A0090B502 /* APIConstants.swift */; };
+		B0AFE033210757670090B502 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AFE032210757670090B502 /* Errors.swift */; };
+		B0AFE037210758050090B502 /* Contacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AFE036210758050090B502 /* Contacts.swift */; };
+		B0AFE039210758150090B502 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AFE038210758150090B502 /* Country.swift */; };
+		B0AFE03B210758320090B502 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AFE03A210758320090B502 /* BaseViewController.swift */; };
+		B0AFE03D210758470090B502 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AFE03C210758470090B502 /* Constants.swift */; };
+		B0AFE03F210758530090B502 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AFE03E210758530090B502 /* Logger.swift */; };
+		B0AFE0412107588A0090B502 /* FirebaseConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AFE0402107588A0090B502 /* FirebaseConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +30,18 @@
 		B0144C922107514800861230 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B0144C952107514800861230 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B0144C972107514800861230 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0AFE025210756B30090B502 /* Contacts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Contacts.storyboard; sourceTree = "<group>"; };
+		B0AFE02A210756E10090B502 /* ContactsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsController.swift; sourceTree = "<group>"; };
+		B0AFE02C210756F40090B502 /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
+		B0AFE02E2107574A0090B502 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		B0AFE0302107575A0090B502 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		B0AFE032210757670090B502 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		B0AFE036210758050090B502 /* Contacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contacts.swift; sourceTree = "<group>"; };
+		B0AFE038210758150090B502 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		B0AFE03A210758320090B502 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		B0AFE03C210758470090B502 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B0AFE03E210758530090B502 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		B0AFE0402107588A0090B502 /* FirebaseConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,12 +74,88 @@
 		B0144C8A2107514600861230 /* MyContacts */ = {
 			isa = PBXGroup;
 			children = (
-				B0144C8B2107514600861230 /* AppDelegate.swift */,
+				B0AFE0202107565E0090B502 /* Application */,
+				B0AFE0212107566E0090B502 /* Contacts */,
+				B0AFE024210756920090B502 /* Helpers */,
+				B0AFE023210756890090B502 /* Utilities */,
+				B0AFE022210756790090B502 /* WebService */,
 				B0144C922107514800861230 /* Assets.xcassets */,
 				B0144C942107514800861230 /* LaunchScreen.storyboard */,
 				B0144C972107514800861230 /* Info.plist */,
 			);
 			path = MyContacts;
+			sourceTree = "<group>";
+		};
+		B0AFE0202107565E0090B502 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				B0144C8B2107514600861230 /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		B0AFE0212107566E0090B502 /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				B0AFE029210756C90090B502 /* Views */,
+				B0AFE028210756C20090B502 /* Controller */,
+				B0AFE027210756BC0090B502 /* Models */,
+				B0AFE025210756B30090B502 /* Contacts.storyboard */,
+			);
+			path = Contacts;
+			sourceTree = "<group>";
+		};
+		B0AFE022210756790090B502 /* WebService */ = {
+			isa = PBXGroup;
+			children = (
+				B0AFE02E2107574A0090B502 /* Networking.swift */,
+				B0AFE0302107575A0090B502 /* APIConstants.swift */,
+				B0AFE032210757670090B502 /* Errors.swift */,
+			);
+			path = WebService;
+			sourceTree = "<group>";
+		};
+		B0AFE023210756890090B502 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				B0AFE03C210758470090B502 /* Constants.swift */,
+				B0AFE03E210758530090B502 /* Logger.swift */,
+				B0AFE0402107588A0090B502 /* FirebaseConstants.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		B0AFE024210756920090B502 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B0AFE03A210758320090B502 /* BaseViewController.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		B0AFE027210756BC0090B502 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B0AFE036210758050090B502 /* Contacts.swift */,
+				B0AFE038210758150090B502 /* Country.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B0AFE028210756C20090B502 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B0AFE02A210756E10090B502 /* ContactsController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B0AFE029210756C90090B502 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B0AFE02C210756F40090B502 /* ContactsViewController.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -116,6 +216,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0AFE026210756B30090B502 /* Contacts.storyboard in Resources */,
 				B0144C962107514800861230 /* LaunchScreen.storyboard in Resources */,
 				B0144C932107514800861230 /* Assets.xcassets in Resources */,
 			);
@@ -128,7 +229,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0AFE02B210756E10090B502 /* ContactsController.swift in Sources */,
+				B0AFE03F210758530090B502 /* Logger.swift in Sources */,
+				B0AFE0312107575A0090B502 /* APIConstants.swift in Sources */,
 				B0144C8C2107514600861230 /* AppDelegate.swift in Sources */,
+				B0AFE02D210756F40090B502 /* ContactsViewController.swift in Sources */,
+				B0AFE039210758150090B502 /* Country.swift in Sources */,
+				B0AFE03D210758470090B502 /* Constants.swift in Sources */,
+				B0AFE03B210758320090B502 /* BaseViewController.swift in Sources */,
+				B0AFE0412107588A0090B502 /* FirebaseConstants.swift in Sources */,
+				B0AFE033210757670090B502 /* Errors.swift in Sources */,
+				B0AFE02F2107574A0090B502 /* Networking.swift in Sources */,
+				B0AFE037210758050090B502 /* Contacts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

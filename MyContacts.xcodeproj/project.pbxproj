@@ -10,6 +10,8 @@
 		B0144C8C2107514600861230 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0144C8B2107514600861230 /* AppDelegate.swift */; };
 		B0144C932107514800861230 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0144C922107514800861230 /* Assets.xcassets */; };
 		B0144C962107514800861230 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0144C942107514800861230 /* LaunchScreen.storyboard */; };
+		B052261A210891870094CF75 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0522619210891870094CF75 /* UIImageView+Extension.swift */; };
+		B052261C2108919B0094CF75 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B052261B2108919B0094CF75 /* String+Extension.swift */; };
 		B0AFE026210756B30090B502 /* Contacts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0AFE025210756B30090B502 /* Contacts.storyboard */; };
 		B0AFE02B210756E10090B502 /* ContactsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AFE02A210756E10090B502 /* ContactsController.swift */; };
 		B0AFE02D210756F40090B502 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AFE02C210756F40090B502 /* ContactsViewController.swift */; };
@@ -38,6 +40,8 @@
 		B0144C922107514800861230 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B0144C952107514800861230 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B0144C972107514800861230 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0522619210891870094CF75 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		B052261B2108919B0094CF75 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		B0AFE025210756B30090B502 /* Contacts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Contacts.storyboard; sourceTree = "<group>"; };
 		B0AFE02A210756E10090B502 /* ContactsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsController.swift; sourceTree = "<group>"; };
 		B0AFE02C210756F40090B502 /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
@@ -105,12 +109,22 @@
 				B0AFE024210756920090B502 /* Helpers */,
 				B0AFE023210756890090B502 /* Utilities */,
 				B0AFE022210756790090B502 /* WebService */,
+				B05226182108912E0094CF75 /* Extensions */,
 				B0144C922107514800861230 /* Assets.xcassets */,
 				B0144C942107514800861230 /* LaunchScreen.storyboard */,
 				B0AFE04A2107773E0090B502 /* GoogleService-Info.plist */,
 				B0144C972107514800861230 /* Info.plist */,
 			);
 			path = MyContacts;
+			sourceTree = "<group>";
+		};
+		B05226182108912E0094CF75 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B0522619210891870094CF75 /* UIImageView+Extension.swift */,
+				B052261B2108919B0094CF75 /* String+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		B0AFE0202107565E0090B502 /* Application */ = {
@@ -334,11 +348,13 @@
 				B0AFE02D210756F40090B502 /* ContactsViewController.swift in Sources */,
 				B0AFE04F2107B7D30090B502 /* ContactListCell.swift in Sources */,
 				B0AFE039210758150090B502 /* Country.swift in Sources */,
+				B052261C2108919B0094CF75 /* String+Extension.swift in Sources */,
 				B0AFE03D210758470090B502 /* Constants.swift in Sources */,
 				B0AFE03B210758320090B502 /* BaseViewController.swift in Sources */,
 				B0AFE0412107588A0090B502 /* FirebaseConstants.swift in Sources */,
 				B0AFE033210757670090B502 /* Errors.swift in Sources */,
 				B0AFE02F2107574A0090B502 /* Networking.swift in Sources */,
+				B052261A210891870094CF75 /* UIImageView+Extension.swift in Sources */,
 				B0AFE037210758050090B502 /* Contacts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

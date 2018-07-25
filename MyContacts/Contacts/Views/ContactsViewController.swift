@@ -78,7 +78,22 @@ extension ContactsViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.contactListCell, for: indexPath) as! ContactListCell
         cell.nameLabel.text = contacts[indexPath.row].name
         cell.phoneLabel.text = contacts[indexPath.row].phone
+        cell.profileImageView.setImage(string: contacts[indexPath.row].name, color: .green)
         
         return cell
     }
 }
+
+extension ContactsViewController : UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        return 70
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        Logger.log("cell selected with contact \(contacts[indexPath.row])")
+    }
+}
+

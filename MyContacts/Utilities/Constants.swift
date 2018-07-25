@@ -11,6 +11,7 @@ import Foundation
 struct Constants {
     static let appName = "My Contacts"
     static let ok = "OK"
+    static let emptyText = " "
 }
 
 struct CellIdentifiers {

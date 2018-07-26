@@ -3,7 +3,7 @@
 //  MyContacts
 //
 //  Created by jithin on 24/07/18.
-//  Copyright © 2018 Jithin. All rights reserved.
+//  Copyright © 2018 jithin. All rights reserved.
 //
 
 import Foundation
@@ -15,11 +15,13 @@ struct Constants {
 }
 
 struct CellIdentifiers {
-    static let contactListCell = "contactCell"
+    static let contactList = "contactCell"
+    static let countryList = "countryListCell"
 }
 
 struct ViewcontrollerIds {
-    static let contactsVC = "ContactsVC"
-    static let addContactVC = "AddContactVC"
+    static let contacts = "ContactsVC"
+    static let addContact = "AddContactVC"
     static let contactDetail = "ContactDetailVC"
+    static let countryList = "CountryListVC"
 }

@@ -3,7 +3,7 @@
 //  MyContacts
 //
 //  Created by jithin on 24/07/18.
-//  Copyright © 2018 Jithin. All rights reserved.
+//  Copyright © 2018 jithin. All rights reserved.
 //
 
 import Foundation
@@ -42,7 +42,7 @@ class ContactsController {
         }
     }
     
-    class func countriesList() -> Result<[Country], APIError>{
+    class func countriesList() -> [Country]?{
         let filepath = getDocumentsDirectory().appendingPathComponent("countries")
         
         do {
@@ -50,14 +50,14 @@ class ContactsController {
             let decoder = JSONDecoder()
             do{
                 let countries = try decoder.decode([Country].self, from: data)
-                return .Success(countries)
+                return countries
             }
-            catch let error{
-                return .Failure(APIError.error(error.localizedDescription))
+            catch {
+                return nil
             }
         }
-        catch let error {
-            return .Failure(APIError.error(error.localizedDescription))
+        catch {
+            return nil
         }
     }
     

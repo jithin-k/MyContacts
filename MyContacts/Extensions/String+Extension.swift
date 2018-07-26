@@ -2,8 +2,8 @@
 //  String+Extension.swift
 //  MyContacts
 //
-//  Created by Denny Mathew on 25/07/18.
-//  Copyright © 2018 Jithin. All rights reserved.
+//  Created by jithin on 25/07/18.
+//  Copyright © 2018 jithin. All rights reserved.
 //
 
 import Foundation
@@ -20,5 +20,10 @@ extension String {
             words.removeFirst()
         }
         return finalString.uppercased()
+    }
+    
+    func isNonEmpty() -> Bool {
+        
+        return self.trimmingCharacters(in: .whitespacesAndNewlines).count > 0
     }
 }

@@ -3,7 +3,7 @@
 //  MyContacts
 //
 //  Created by jithin on 24/07/18.
-//  Copyright © 2018 Jithin. All rights reserved.
+//  Copyright © 2018 jithin. All rights reserved.
 //
 
 import UIKit
@@ -75,7 +75,7 @@ class ContactsViewController: BaseViewController {
     
     @IBAction func addButtonTapped(_ sender: UIBarButtonItem) {
         
-        let addContactVC = storyboard?.instantiateViewController(withIdentifier: ViewcontrollerIds.addContactVC) as! AddContactViewController
+        let addContactVC = storyboard?.instantiateViewController(withIdentifier: ViewcontrollerIds.addContact) as! AddContactViewController
         self.navigationController?.pushViewController(addContactVC, animated: true)
     }
     
@@ -113,7 +113,7 @@ extension ContactsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.contactListCell, for: indexPath) as! ContactListCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.contactList, for: indexPath) as! ContactListCell
         
         let contact: Contact
         if isSearchActive(){

@@ -33,6 +33,27 @@ class ContactDetailViewController: UIViewController {
         phoneLabel.text = contact.phone
         emailLabel.text = contact.email
         countryLabel.text = contact.country
-        profileImageView.setImage(string: contact.name, color: .gray, fontSize: 40)
+        profileImageView.setImage(string: contact.name, color: .gray, fontSize: 32)
     }
+    
+    @IBAction func editTapped(_ sender: UIBarButtonItem) {
+        
+        let addContactVC = storyboard?.instantiateViewController(withIdentifier: ViewcontrollerIds.addContact) as! AddContactViewController
+        addContactVC.contact = contact
+        addContactVC.uiState = .editContact
+        addContactVC.delegate = self
+        let nav = UINavigationController(rootViewController: addContactVC)
+        self.navigationController?.present(nav, animated: true, completion: nil)
+        
+    }
+}
+
+extension ContactDetailViewController: EditContactDelegate {
+    
+    func didEditContact(_ contact: Contact) {
+        self.contact = contact
+        setContactData()
+    }
+    
+    
 }

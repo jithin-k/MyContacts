@@ -8,6 +8,14 @@
 
 import UIKit
 
+protocol EditContactDelegate {
+    func didEditContact(_ contact: Contact)
+}
+
+enum UIState {
+    case addContact
+    case editContact
+}
 class AddContactViewController: UIViewController {
 
     @IBOutlet weak var nameTextField: UITextField!
@@ -15,7 +23,12 @@ class AddContactViewController: UIViewController {
     @IBOutlet weak var phoneTextField: UITextField!
     @IBOutlet weak var countryTextField: UITextField!
     @IBOutlet weak var addContactButton: UIButton!
+    @IBOutlet weak var profileImageView: UIImageView!
+    
     var countries: [Country]?
+    var uiState: UIState = .addContact
+    var contact: Contact?
+    var delegate: EditContactDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,16 +36,52 @@ class AddContactViewController: UIViewController {
         navigationItem.largeTitleDisplayMode = .never
         guard let countries = ContactsController.countriesList() else { return }
         self.countries = countries
+        navigationItem.title = Constants.newContact
+        if uiState == .editContact{
+            navigationItem.title = Constants.editContact
+            addCancelButton()
+            setContactDetails()
+        }
     }
 
+    fileprivate func addCancelButton(){
+        let cancelButton = UIBarButtonItem(title: Constants.cancel, style: .plain, target: self, action: #selector(dismissVC))
+        navigationItem.rightBarButtonItem = cancelButton
+    }
+    
+    @objc func dismissVC() {
+        self.navigationController?.dismiss(animated: true, completion: nil)
+    }
+    
+    fileprivate func setContactDetails() {
+        guard let contact = contact else { return }
+        nameTextField.text = contact.name
+        phoneTextField.text = contact.phone
+        emailTextField.text = contact.email
+        countryTextField.text = contact.country
+        profileImageView.setImage(string: contact.name, color: .gray, fontSize: 32)
+    }
+    
     @IBAction func saveContactTapped(_ sender: UIButton) {
         
-        guard let name = nameTextField.text, name.isNonEmpty(), let email = emailTextField.text, let phone = phoneTextField.text, let country = countryTextField.text, country.isNonEmpty() else { return }
+        guard let name = nameTextField.text, let email = emailTextField.text, let phone = phoneTextField.text, let country = countryTextField.text else { return }
         
-        let contact = Contact(id: UUID().uuidString, name: name, email: email, phone: phone, country: country)
+        if uiState == .addContact{
+            let newContact = Contact(id: UUID().uuidString, name: name, email: email, phone: phone, country: country)
+            FirebaseManager.shared.saveContact(newContact)
+        }
+        else if let savedContact = self.contact{
+            let updatedContact = Contact(id: savedContact.id, name: name, email: email, phone: phone, country: country)
+            FirebaseManager.shared.saveContact(updatedContact)
+            delegate?.didEditContact(updatedContact)
+            self.navigationController?.dismiss(animated: true, completion: {
+                
+            })
+        }
         
-        FirebaseManager.shared.saveContact(contact)
-        self.navigationController?.popViewController(animated: true)
+        if uiState == .addContact {
+            self.navigationController?.popViewController(animated: true)
+        }
     }
     
     fileprivate func presentCountryListVC() {
@@ -67,6 +116,7 @@ extension AddContactViewController: UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
+        
         if validateFields(){
             addContactButton.isEnabled = true
         }

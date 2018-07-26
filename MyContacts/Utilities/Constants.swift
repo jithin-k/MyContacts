@@ -12,6 +12,9 @@ struct Constants {
     static let appName = "My Contacts"
     static let ok = "OK"
     static let emptyText = " "
+    static let cancel = "Cancel"
+    static let newContact = "New Contact"
+    static let editContact = "Edit Contact"
 }
 
 struct CellIdentifiers {

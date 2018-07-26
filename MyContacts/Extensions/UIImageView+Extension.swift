@@ -10,9 +10,9 @@ import UIKit
 
 extension UIImageView {
     
-    func setImage(string: String?, color: UIColor, circular: Bool = true, fontSize: CGFloat = 20) {
+    func setImage(string: String?, color: UIColor, circular: Bool = true, fontSize: CGFloat = 16) {
         
-        let attributes: [NSAttributedStringKey: Any]? = [NSAttributedStringKey.foregroundColor: UIColor.white, NSAttributedStringKey.font: UIFont.systemFont(ofSize: fontSize, weight: .medium)]
+        let attributes: [NSAttributedStringKey: Any]? = [NSAttributedStringKey.foregroundColor: UIColor.white, NSAttributedStringKey.font: UIFont.systemFont(ofSize: fontSize, weight: .bold)]
         let image = imageSnap(text: string != nil ? string?.initials : Constants.emptyText, color: color, circular: circular, textAttributes: attributes)
         
         if let newImage = image {

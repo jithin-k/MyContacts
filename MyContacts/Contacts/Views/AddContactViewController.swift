@@ -116,7 +116,15 @@ extension AddContactViewController: UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        
+        if textField == nameTextField{
+            phoneTextField.becomeFirstResponder()
+        }
+        else if textField == phoneTextField{
+            emailTextField.becomeFirstResponder()
+        }
+        else if textField == emailTextField{
+            countryTextField.becomeFirstResponder()
+        }
         if validateFields(){
             addContactButton.isEnabled = true
         }

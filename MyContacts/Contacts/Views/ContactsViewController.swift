@@ -21,10 +21,15 @@ class ContactsViewController: BaseViewController {
         super.viewDidLoad()
         
         searchController.searchResultsUpdater = self
-        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.obscuresBackgroundDuringPresentation = true
         navigationItem.searchController = searchController
         definesPresentationContext = true
         addListeners()
+        
+
+        DispatchQueue.global(qos: .background).async {
+            ContactsController.fetchCountriesList()
+        }
     }
     
     fileprivate func addListeners (){
@@ -101,6 +106,7 @@ extension ContactsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.contactListCell, for: indexPath) as! ContactListCell
         
         let contact: Contact
@@ -121,12 +127,10 @@ extension ContactsViewController: UITableViewDataSource {
 extension ContactsViewController : UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
-        return 70
+        return 60
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         Logger.log("cell selected with contact \(contacts[indexPath.row])")
     }
 }

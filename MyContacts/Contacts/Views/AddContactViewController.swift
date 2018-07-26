@@ -20,6 +20,7 @@ class AddContactViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        navigationItem.largeTitleDisplayMode = .never
     }
 
     @IBAction func saveContactTapped(_ sender: UIButton) {

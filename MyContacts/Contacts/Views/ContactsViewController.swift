@@ -21,7 +21,7 @@ class ContactsViewController: BaseViewController {
         super.viewDidLoad()
         
         searchController.searchResultsUpdater = self
-        searchController.obscuresBackgroundDuringPresentation = true
+        searchController.obscuresBackgroundDuringPresentation = false
         navigationItem.searchController = searchController
         definesPresentationContext = true
         addListeners()
@@ -94,6 +94,12 @@ class ContactsViewController: BaseViewController {
         return searchController.isActive && !searchBarIsEmpty()
     }
     
+    fileprivate func showDetailWithContact(_ contact: Contact) {
+        
+        let contactDetailVC = storyboard?.instantiateViewController(withIdentifier: ViewcontrollerIds.contactDetail) as! ContactDetailViewController
+        contactDetailVC.contact = contact
+        self.navigationController?.pushViewController(contactDetailVC, animated: true)
+    }
 }
 
 extension ContactsViewController: UITableViewDataSource {
@@ -132,6 +138,14 @@ extension ContactsViewController : UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         Logger.log("cell selected with contact \(contacts[indexPath.row])")
+        let contact: Contact
+        if isSearchActive(){
+            contact = filteredContacts[indexPath.row]
+        }
+        else{
+            contact = contacts[indexPath.row]
+        }
+        showDetailWithContact(contact)
     }
 }
 

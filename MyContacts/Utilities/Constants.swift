@@ -21,4 +21,5 @@ struct CellIdentifiers {
 struct ViewcontrollerIds {
     static let contactsVC = "ContactsVC"
     static let addContactVC = "AddContactVC"
+    static let contactDetail = "ContactDetailVC"
 }

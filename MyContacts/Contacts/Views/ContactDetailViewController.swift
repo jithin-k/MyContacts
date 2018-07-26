@@ -15,6 +15,7 @@ class ContactDetailViewController: UIViewController {
     @IBOutlet weak var phoneLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var countryLabel: UILabel!
+    @IBOutlet weak var profileImageView: UIImageView!
     
     
     override func viewDidLoad() {
@@ -32,5 +33,6 @@ class ContactDetailViewController: UIViewController {
         phoneLabel.text = contact.phone
         emailLabel.text = contact.email
         countryLabel.text = contact.country
+        profileImageView.setImage(string: contact.name, color: .gray, fontSize: 40)
     }
 }

@@ -124,7 +124,7 @@ extension ContactsViewController: UITableViewDataSource {
         }
         cell.nameLabel.text = contact.name
         cell.phoneLabel.text = contact.phone
-        cell.profileImageView.setImage(string: contact.name, color: .green)
+        cell.profileImageView.setImage(string: contact.name, color: .gray)
         
         return cell
     }

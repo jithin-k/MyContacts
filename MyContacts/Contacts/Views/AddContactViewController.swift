@@ -14,6 +14,7 @@ class AddContactViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var phoneTextField: UITextField!
     @IBOutlet weak var countryTextField: UITextField!
+    @IBOutlet weak var addContactButton: UIButton!
     var countries: [Country]?
     
     override func viewDidLoad() {
@@ -48,10 +49,29 @@ class AddContactViewController: UIViewController {
 
 extension AddContactViewController: UITextFieldDelegate {
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        textField.resignFirstResponder()
+        return true
+    }
     func textFieldDidBeginEditing(_ textField: UITextField) {
         
         if textField == countryTextField {
             presentCountryListVC()
+        }
+    }
+    
+    fileprivate func validateFields() -> Bool {
+        guard let name = nameTextField.text, name.isNonEmpty(), let email = emailTextField.text, email.isValidEmail(), let phone = phoneTextField.text, phone.isValidPhoneNumber(), let country = countryTextField.text, country.isNonEmpty() else { return false }
+        return true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if validateFields(){
+            addContactButton.isEnabled = true
+        }
+        else{
+            addContactButton.isEnabled = false
         }
     }
 }
@@ -61,5 +81,12 @@ extension AddContactViewController: CountrySelectionDelegate {
     func didSelectCountry(_ country: Country) {
         
         countryTextField.text = country.name
+        
+        if validateFields(){
+            addContactButton.isEnabled = true
+        }
+        else{
+            addContactButton.isEnabled = false
+        }
     }
 }

@@ -102,10 +102,10 @@
             </objects>
             <point key="canvasLocation" x="517.60000000000002" y="151.57421289355324"/>
         </scene>
-        <!--Add Contact-->
+        <!--New Contact-->
         <scene sceneID="S7z-mP-P3a">
             <objects>
-                <viewController storyboardIdentifier="AddContactVC" title="Add Contact" id="bDl-mT-Ku6" customClass="AddContactViewController" customModule="MyContacts" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddContactVC" title="New Contact" id="bDl-mT-Ku6" customClass="AddContactViewController" customModule="MyContacts" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5OG-5h-m7d">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -124,7 +124,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="262.5" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES" textContentType="name"/>
                                         <connections>
                                             <outlet property="delegate" destination="bDl-mT-Ku6" id="cXx-YD-b6E"/>
                                         </connections>
@@ -133,7 +133,7 @@
                                         <rect key="frame" x="0.0" y="70" width="262.5" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" enablesReturnKeyAutomatically="YES" textContentType="email"/>
                                         <connections>
                                             <outlet property="delegate" destination="bDl-mT-Ku6" id="qtg-Ww-Cpa"/>
                                         </connections>
@@ -142,7 +142,7 @@
                                         <rect key="frame" x="0.0" y="140" width="262.5" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="next" enablesReturnKeyAutomatically="YES" textContentType="tel"/>
                                         <connections>
                                             <outlet property="delegate" destination="bDl-mT-Ku6" id="sh4-oq-6dg"/>
                                         </connections>
@@ -151,14 +151,14 @@
                                         <rect key="frame" x="0.0" y="210" width="262.5" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" textContentType="country-name"/>
                                         <connections>
                                             <outlet property="delegate" destination="bDl-mT-Ku6" id="49O-1J-8pP"/>
                                         </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lvM-TQ-Ttl">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lvM-TQ-Ttl">
                                 <rect key="frame" x="141.5" y="617" width="92" height="30"/>
                                 <state key="normal" title="Save Contact"/>
                                 <connections>
@@ -180,6 +180,7 @@
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="addContactButton" destination="lvM-TQ-Ttl" id="TD7-tL-QAj"/>
                         <outlet property="countryTextField" destination="rs3-9a-HHi" id="lZh-ng-lGw"/>
                         <outlet property="emailTextField" destination="Y0a-qM-Bmq" id="GwP-xJ-UKZ"/>
                         <outlet property="nameTextField" destination="E5q-9N-G92" id="16w-KG-wJG"/>
@@ -251,13 +252,14 @@
                         <outlet property="emailLabel" destination="Dja-yp-9wR" id="o0j-W0-Qxw"/>
                         <outlet property="nameLabel" destination="0QF-Cb-7dI" id="CIh-Is-cUS"/>
                         <outlet property="phoneLabel" destination="Lvt-vc-V6t" id="FsX-5U-pmT"/>
+                        <outlet property="profileImageView" destination="4bp-nu-3vd" id="dfq-B7-xd4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="foS-Gk-VxW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1913" y="152"/>
         </scene>
-        <!--Countries-->
+        <!--Country-->
         <scene sceneID="LQK-hr-j8X">
             <objects>
                 <viewController storyboardIdentifier="CountryListVC" id="2F7-Lc-bPt" customClass="CountryListViewController" customModule="MyContacts" customModuleProvider="target" sceneMemberID="viewController">
@@ -303,7 +305,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Fjm-vu-4Gx"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Countries" id="ebM-Ha-gEN">
+                    <navigationItem key="navigationItem" title="Country" id="ebM-Ha-gEN">
                         <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="moD-Oc-gx1">
                             <connections>
                                 <action selector="cancelTapped:" destination="2F7-Lc-bPt" id="zXs-QE-Ih4"/>

@@ -201,8 +201,8 @@
 				B0AFE02C210756F40090B502 /* ContactsViewController.swift */,
 				B0AFE04C2107AD4E0090B502 /* AddContactViewController.swift */,
 				B0DFB8372109A57000A79E09 /* ContactDetailViewController.swift */,
-				B0AFE04E2107B7D30090B502 /* ContactListCell.swift */,
 				B0DFB8392109DA8B00A79E09 /* CountryListViewController.swift */,
+				B0AFE04E2107B7D30090B502 /* ContactListCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";

@@ -9,21 +9,20 @@
 import Foundation
 
 extension String {
-    
+
     public var initials: String {
         
-        var finalString = String()
-        var words = components(separatedBy: .whitespacesAndNewlines)
+        var initials = String()
+        let words = components(separatedBy: " ")
         
-        if let firstCharacter = words.first?.first {
-            finalString.append(String(firstCharacter))
-            words.removeFirst()
+        for item in words{
+            guard initials.count < 2, let first = item.first else { return initials.uppercased() }
+            initials.append(first)
         }
-        return finalString.uppercased()
+        return initials.uppercased()
     }
     
     func isNonEmpty() -> Bool {
-        
         return self.trimmingCharacters(in: .whitespacesAndNewlines).count > 0
     }
 }

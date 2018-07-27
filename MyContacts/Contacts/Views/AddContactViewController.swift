@@ -41,7 +41,7 @@ class AddContactViewController: UIViewController {
         nameTextField.becomeFirstResponder()
         if uiState == .editContact{
             navigationItem.title = Constants.editContact
-            addCancelButton()
+            addCancelButtonToNavBar()
             setContactDetails()
         }
     }
@@ -76,7 +76,7 @@ class AddContactViewController: UIViewController {
 //        }
 //    }
     
-    fileprivate func addCancelButton(){
+    fileprivate func addCancelButtonToNavBar(){
         let cancelButton = UIBarButtonItem(title: Constants.cancel, style: .plain, target: self, action: #selector(dismissVC))
         navigationItem.rightBarButtonItem = cancelButton
     }

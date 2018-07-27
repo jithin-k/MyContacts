@@ -24,6 +24,7 @@ class AddContactViewController: UIViewController {
     @IBOutlet weak var countryTextField: UITextField!
     @IBOutlet weak var addContactButton: UIButton!
     @IBOutlet weak var profileImageView: UIImageView!
+    var activeTextField: UITextField?
     
     var countries: [Country]?
     var uiState: UIState = .addContact
@@ -37,13 +38,44 @@ class AddContactViewController: UIViewController {
         guard let countries = ContactsController.countriesList() else { return }
         self.countries = countries
         navigationItem.title = Constants.newContact
+        nameTextField.becomeFirstResponder()
         if uiState == .editContact{
             navigationItem.title = Constants.editContact
             addCancelButton()
             setContactDetails()
         }
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+//
+//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+    }
 
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+//    @objc func keyboardWillShow(notification: NSNotification) {
+//        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+//            if self.view.frame.origin.y == 0{
+//                self.view.frame.origin.y -= keyboardSize.height
+//            }
+//        }
+//    }
+//
+//    @objc func keyboardWillHide(notification: NSNotification) {
+//        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+//            if self.view.frame.origin.y != 0{
+//                self.view.frame.origin.y += keyboardSize.height
+//            }
+//        }
+//    }
+    
     fileprivate func addCancelButton(){
         let cancelButton = UIBarButtonItem(title: Constants.cancel, style: .plain, target: self, action: #selector(dismissVC))
         navigationItem.rightBarButtonItem = cancelButton
@@ -104,7 +136,7 @@ extension AddContactViewController: UITextFieldDelegate {
         return true
     }
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        
+        activeTextField = textField
         if textField == countryTextField {
             presentCountryListVC()
         }
@@ -116,6 +148,7 @@ extension AddContactViewController: UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
+        activeTextField = nil
         if textField == nameTextField{
             phoneTextField.becomeFirstResponder()
         }

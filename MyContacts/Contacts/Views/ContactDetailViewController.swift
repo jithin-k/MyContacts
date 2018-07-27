@@ -46,6 +46,13 @@ class ContactDetailViewController: UIViewController {
         self.navigationController?.present(nav, animated: true, completion: nil)
         
     }
+    
+    @IBAction func callTapped(_ sender: UIButton) {
+        
+        guard let contact = contact, let phoneUrl = URL(string: "tel://\(contact.phone)"), UIApplication.shared.canOpenURL(phoneUrl) else { return }
+        UIApplication.shared.open(phoneUrl)
+
+    }
 }
 
 extension ContactDetailViewController: EditContactDelegate {

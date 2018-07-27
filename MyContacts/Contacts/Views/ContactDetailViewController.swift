@@ -53,6 +53,12 @@ class ContactDetailViewController: UIViewController {
         UIApplication.shared.open(phoneUrl)
 
     }
+    
+    @IBAction func deleteContactTapped(_ sender: UIButton) {
+        guard let contact = contact else { return }
+        FirebaseManager.shared.deleteContact(contact)
+        self.navigationController?.popViewController(animated: true)
+    }
 }
 
 extension ContactDetailViewController: EditContactDelegate {

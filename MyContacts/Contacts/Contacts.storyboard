@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -402,11 +401,21 @@
                                     <action selector="callTapped:" destination="ghh-fg-RPT" eventType="touchUpInside" id="fCj-GL-NrG"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bNM-j7-PqG">
+                                <rect key="frame" x="136.5" y="621" width="103" height="30"/>
+                                <state key="normal" title="Delete Contact">
+                                    <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="deleteContactTapped:" destination="ghh-fg-RPT" eventType="touchUpInside" id="Sv0-PX-QSa"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="aYp-a4-VDE" firstAttribute="leading" secondItem="li9-y1-ouf" secondAttribute="trailing" constant="8" id="0U9-d8-fbS"/>
                             <constraint firstItem="3HY-PW-NWG" firstAttribute="centerY" secondItem="bGa-xu-DQ8" secondAttribute="centerY" id="3N0-Mo-Ftz"/>
+                            <constraint firstItem="OB8-fY-AS4" firstAttribute="bottom" secondItem="bNM-j7-PqG" secondAttribute="bottom" constant="16" id="6NB-ND-ckB"/>
                             <constraint firstItem="pc3-DQ-f92" firstAttribute="centerY" secondItem="3IM-62-4y0" secondAttribute="centerY" id="8c1-c0-Iex"/>
                             <constraint firstItem="aYp-a4-VDE" firstAttribute="centerX" secondItem="tdy-Dh-KI2" secondAttribute="centerX" id="BaN-NP-rfz"/>
                             <constraint firstItem="aYp-a4-VDE" firstAttribute="top" secondItem="0QF-Cb-7dI" secondAttribute="bottom" constant="40" id="FYp-Ac-tch"/>
@@ -420,6 +429,7 @@
                             <constraint firstItem="4bp-nu-3vd" firstAttribute="top" secondItem="OB8-fY-AS4" secondAttribute="top" constant="8" id="hlf-uK-uFZ"/>
                             <constraint firstItem="0QF-Cb-7dI" firstAttribute="width" secondItem="tdy-Dh-KI2" secondAttribute="width" multiplier="0.7" id="jlK-eS-yS9"/>
                             <constraint firstItem="Tc3-cM-i5K" firstAttribute="leading" secondItem="bGa-xu-DQ8" secondAttribute="trailing" id="p30-DZ-KQo"/>
+                            <constraint firstItem="bNM-j7-PqG" firstAttribute="centerX" secondItem="tdy-Dh-KI2" secondAttribute="centerX" id="w6I-Fl-i9c"/>
                             <constraint firstItem="aYp-a4-VDE" firstAttribute="leading" secondItem="3HY-PW-NWG" secondAttribute="trailing" constant="8" id="zZa-z3-79S"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="OB8-fY-AS4"/>

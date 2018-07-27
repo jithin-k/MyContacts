@@ -27,6 +27,10 @@ class FirebaseManager {
         rootRef.child(contact.id).setValue(contact.asAny())
     }
     
+    func deleteContact(_ contact: Contact) {
+        rootRef.child(contact.id).removeValue()
+    }
+    
     func contactAdded(completion: @escaping ContactCompletion) {
         newContactHandle = rootRef.observe(.childAdded) { (snapshot) in
             guard let contact = Contact(snapshot: snapshot) else { return }
